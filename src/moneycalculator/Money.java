@@ -4,7 +4,11 @@ public class Money {
     private Number amount;
     private Currency currency;
 
-    public Money() {
+    public Money(double amount, Currency currency) {
+        this.amount = amount;
+        this.currency = currency;
     }
+    
+    
     
 }
