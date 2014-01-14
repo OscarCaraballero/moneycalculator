@@ -23,4 +23,10 @@ public class Currency {
         return symbol;
     }
     
+    @Override
+    public String toString() {
+        if (symbol!=null)return symbol;
+        else return code;
+    }
+    
 }

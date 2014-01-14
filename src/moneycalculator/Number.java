@@ -49,5 +49,51 @@ public class Number {
         return ((numerator % prime) == 0) && ((denominator % prime) == 0);
     }
     
+    public Number add(Number number){
+        long numerator;
+        long denominator;
+        
+        denominator = this.denominator * number.denominator;
+        numerator = ((denominator / this.denominator) * this.numerator) +
+                    ((denominator / number.denominator) * number.numerator);
+        
+        return new Number(numerator,denominator);
+    }
+    
+    public Number substract(Number number){
+        long numerator;
+        long denominator;
+        
+        denominator=this.denominator * number.denominator;
+        numerator=((denominator/this.denominator) * this.numerator) -
+                ((denominator/number.denominator) * number.numerator);
+        
+        return new Number(numerator,denominator);
+    }
+    
+    public Number multiply(Number number){
+        long numerator;
+        long denominator;
+        
+        denominator=this.denominator * number.denominator;
+        numerator=this.numerator * number.numerator;
+        
+        return new Number(numerator,denominator);
+    }
+    
+    public Number divide(Number number){
+        long numerator;
+        long denominator;
+        
+        denominator=this.denominator * number.numerator;
+        numerator=this.numerator * number.denominator;
+        
+        return new Number(numerator,denominator);
+    }
+    
+    @Override
+    public String toString(){
+        return Double.toString((double)numerator/(double)denominator);
+    }
     
 }
