@@ -15,12 +15,12 @@ public class CurrencySet extends HashSet <CurrencySet> {
         return instance;
     }
     
-    public Currency search(Currency currency){
-        for (Currency code: currencies){
+    public Currency search(Currency currency) {
+        for (Currency code: currencies) {
             if(code.getCode().equals(currency.getCode()))
-                return currency;
+                return currency;   
         }
-            return null;
+        return null;
     }
     
 }

@@ -5,21 +5,21 @@ import java.util.Date;
 public class ExchangeRate {
 
     private final Date date;
-    private final Currency inputCurrency;
-    private final Currency outputCurrency;
+    private final Currency fromCurrency;
+    private final Currency toCurrency;
     private final Number rate;
 
     public ExchangeRate(Date date, Currency inputCurrency, Currency outputCurrency, Number rate) {
         this.date = date;
-        this.inputCurrency = inputCurrency;
-        this.outputCurrency = outputCurrency;
+        this.fromCurrency = inputCurrency;
+        this.toCurrency = outputCurrency;
         this.rate = rate;
     }
 
     public ExchangeRate(Currency inputCurrency, Currency outputCurrency, Number rate) {
         this.date = new Date();
-        this.inputCurrency = inputCurrency;
-        this.outputCurrency = outputCurrency;
+        this.fromCurrency = inputCurrency;
+        this.toCurrency = outputCurrency;
         this.rate = rate;
     }
 
@@ -28,11 +28,11 @@ public class ExchangeRate {
     }
 
     public Currency getInputCurrency() {
-        return inputCurrency;
+        return fromCurrency;
     }
 
     public Currency getOutputCurrency() {
-        return outputCurrency;
+        return toCurrency;
     }
 
     public Number getRate() {
