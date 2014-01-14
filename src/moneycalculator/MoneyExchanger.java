@@ -1,5 +1,5 @@
 package moneycalculator;
 
-public class MoneyExchanger {
-
+public interface MoneyExchanger {
+    public void execute();
 }
